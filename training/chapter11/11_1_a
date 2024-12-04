@@ -1,1 +1,23 @@
-a
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+    struct data
+    {
+        int num;
+        char ch;
+        double dist;
+    }aaa;
+
+    printf("aaa佔了%dbyte", sizeof(aaa));
+
+    return 0;
+}
+//output:
+aaa佔了16byte  
+
+//4(int)+1(char)+8(double)=13
+//double=8byte 須為8的倍數=16
