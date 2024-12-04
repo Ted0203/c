@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+    struct date
+    {
+        int year;
+        int month;
+        int day;
+    }holiday={2004,4,26}, festival;
+
+    printf("enter year:");
+    scanf("%d", &festival.year);
+    printf("enter month:");
+    scanf("%d", &festival.month);
+    printf("enter day:");
+    scanf("%d", &festival.day);
+
+    printf("%d/%d/%d", festival.month, festival.day, festival.year);
+
+    return 0;
+}
