@@ -21,6 +21,7 @@ int main()
     }now={2024,12,5,{9,21,0.0}};
     
     printf("now的值為:%d/%d/%d %d/%d/%.2lf", now.year, now.month, now.day, now.start.hour, now.start.minutes, now.start.second);
+    printf("now佔了%dbyte", sizeof(now));
     
 
     return 0;
@@ -28,3 +29,4 @@ int main()
 
 //output:
 //now的值為:2024/12/5 9/21/0.00
+  now佔了32byte
