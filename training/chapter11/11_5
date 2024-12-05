@@ -1,0 +1,23 @@
+include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+    struct time
+    {
+        int hour;
+        int minutes;
+        double second;
+    }start={12,32,25.49}, end={15,12,17.53}, elapse;
+    
+    printf("start變數佔了%dbyte\n", sizeof(start));
+    printf("end變數佔了%dbyte\n", sizeof(end));
+    
+
+    return 0;
+}
+//output:
+//start變數佔了16byte
+  end變數佔了16byte
