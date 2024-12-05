@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+    enum boolean
+    {
+        false,
+        true        //(a)false預設值為0, true預設值為1
+    }test;
+    
+    test=5<20;
+    
+    printf("%d\n", sizeof(test));       //(b)
+    if(test==true)                      //(c)
+        printf("5<20 成立\n");
+    else
+        printf("5>=20 不成立\n");
+    
+    if(test)                            //(d)
+        printf("5<20 成立\n");
+    else
+        printf("5>=20 不成立\n");
+    
+    
+
+    return 0;
+}
+
+//output:
+4
+5<20 成立
+5<20 成立
