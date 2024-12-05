@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+    struct data
+    {
+        char name[10];
+        int score;
+    }student[2];
+    
+    int a;
+    
+    for(a=0;a<2;a++)
+    {
+        printf("enter name:");
+        gets((student+a)->name);
+        printf("enter score:");
+        scanf("%d", &(student+a)->score);
+        getchar();
+    }
+    
+    for(a=0;a<2;a++)
+    {
+        printf("學生%s的成績為:%d\n", (student+a)->name, (student+a)->score);
+    }
+    
+
+    return 0;
+}
+
+//output:
+enter name:Ted
+enter score:99
+enter name:James
+enter score:76
+學生Ted的成績為:99
+學生James的成績為:76
