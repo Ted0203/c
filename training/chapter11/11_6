@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+    struct date
+    {
+        int month;
+        int day;
+    }birthday;
+    
+    struct data
+    {
+        char name[10];
+        int math;
+        struct date birthday;
+    }s1;
+    
+    printf("enter name:");
+    gets(s1.name);
+    printf("enter math:");
+    scanf("%d", &s1.math);
+    printf("enter birthday month:");
+    scanf("%d", &s1.birthday.month);
+    printf("enter birthday day:");
+    scanf("%d", &s1.birthday.day);
+    
+    printf("%s同學數學成績為%d, 生日為:%d/%d\n", s1.name, s1.math, s1.birthday.month, s1.birthday.day);
+    
+
+    return 0;
+}
+
+//output:
+//enter name:Ted
+  enter math:99
+  enter birthday month:4
+  enter birthday day:10
+  Ted同學數學成績為99, 生日為:4/10
