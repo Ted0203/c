@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+    struct date
+    {
+        int year;
+        int month;
+        int day;
+    }holiday={2004,4,26}, festival;
+
+    printf("%d\n", sizeof(festival));
+
+    return 0;
+}
+//output:
+//12
