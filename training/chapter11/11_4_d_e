@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+    struct time
+    {
+        int hour;
+        int minutes;
+        double second;
+    }start={14,32,25.49}, end={15,12,17.53}, elapse;
+    
+    printf("start的值為 %d:%d:%.2lf\n", start.hour, start.minutes, start.second);
+    printf("end的值為 %d:%d:%.2lf\n", end.hour, end.minutes, end.second);
+    
+    elapse.hour=end.hour-start.hour;
+    if(end.minutes<start.minutes)
+    {
+        elapse.minutes=60-start.minutes+end.minutes;
+        elapse.hour--;
+    }
+    else
+        elapse.minutes=end.minutes-start.minutes;
+    
+    if(end.second<start.second)
+    {
+        elapse.second=60-start.second+end.second;
+        elapse.minutes--;
+    }
+    else
+        elapse.second=end.second-start.second;
+        
+    printf("elapse的值為 %d:%d:%.2lf\n", elapse.hour, elapse.minutes, elapse.second);
+    
+
+    return 0;
+}
+
+//output:
+//start的值為 12:32:25.49
+  end的值為 15:12:17.53
+  elapse的值為 2:39:52.04
