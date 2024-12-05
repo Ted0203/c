@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct data
+{
+    char name[10];
+    int math;
+}a={"Ted",80};
+
+void add5(struct data *b)
+{
+    b->math+=5;
+}
+
+int main()
+{
+    printf("before add5, math成績為:%d\n", a.math);
+    add5(&a);
+    printf("before add5, math成績為:%d\n", a.math);
+
+    return 0;
+}
+
+//output:
+before add5, math成績為:80
+after add5, math成績為:85
