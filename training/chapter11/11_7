@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+    struct date
+    {
+        int month;
+        int day;
+    }birthday;
+    
+    struct data
+    {
+        char name[10];
+        int math;
+        struct date birthday;
+    }s1;
+    
+    printf("s1佔了%dbyte", sizeof(s1));
+    
+
+    return 0;
+}
+
+//output:
+//s1佔了24byte
