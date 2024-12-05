@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+    struct time
+    {
+        int hour;
+        int minutes;
+        double second;
+    }start;
+    
+    struct date
+    {
+        int year;
+        int month;
+        int day;
+        struct time start;
+    }now={2024,12,5,{9,21,0.0}};
+    
+    printf("now的值為:%d/%d/%d %d/%d/%.2lf", now.year, now.month, now.day, now.start.hour, now.start.minutes, now.start.second);
+    
+
+    return 0;
+}
+
+//output:
+//now的值為:2024/12/5 9/21/0.00
