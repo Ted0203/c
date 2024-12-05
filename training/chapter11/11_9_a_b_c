@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+    struct data
+    {
+        char name[10];
+        int score;
+    }student[5]={{"Ted",93},{"Lily",98},{"James",45},{"Tom",23},{"Ray",68}};
+    
+    int a, b=0;
+    double sum=0;
+    
+    printf("(a)\n");        //(a)
+    for(a=0;a<5;a++)
+    {
+        if(student[a].score>student[b].score)
+            b=a;
+    }
+    printf("成績最高學生為:%s, 成績為:%d\n", student[b].name, student[b].score);
+    
+    printf("(b)\n");        //(b)
+    for(a=0;a<5;a++)
+    {
+        if(student[a].score<60)
+            printf("成績不格學生為:%s, 成績為:%d\n", student[a].name, student[a].score);
+    }
+    
+    printf("(c)\n");        //(c)
+    for(a=0;a<5;a++)
+        sum+=student[a].score;
+    printf("平均值為:%.1lf", sum/5.0);
+    
+
+    return 0;
+}
+
+//output:
+(a)
+成績最高學生為:Lily, 成績為:98
+(b)
+成績不格學生為:James, 成績為:45
+成績不格學生為:Tom, 成績為:23
+(c)
+平均值為:65.4
