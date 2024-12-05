@@ -1,0 +1,99 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct data
+{
+    char name[10];
+    int math;
+}student[5]={{"Ted", 84},{"James",42},{"Danniel",88},{"Ray",99},{"Lily",53}};
+
+struct data best(struct data a[])       //(a)
+{
+    int b, c=0;
+    for(b=0;b<5;b++)
+    {
+        if(a[b].math>a[c].math)
+            c=b;
+    }
+    
+    return a[c];
+}
+
+void failed(struct data e[])        //(b)
+{
+    int i;
+    for(i=0;i<5;i++)
+    {
+        if(e[i].math<60)
+            printf("不及格學生%s成績為:%d\n", e[i].name, e[i].math);
+    }
+}
+
+double average(struct data f[])     //(c)
+{
+    int i;
+    double sum=0;
+    for(i=0;i<5;i++)
+    {
+        sum+=f[i].math;
+    }
+    
+    return sum/5.0;
+}
+
+void sort(struct data g[])      //(d)
+{
+    int i, j, f;
+    struct data a;
+    for(i=0;i<5;i++)
+    {
+        f=0;
+        for(j=1;j<5-i;j++)
+            if(g[j].math>g[j-1].math)
+            {
+                struct data a=g[j];
+                g[j]=g[j-1];
+                g[j-1]=a;
+                f=1;
+            }
+            if(f==0)
+                break;
+    }
+    for(i=0;i<5;i++)
+        printf("%s同學 分數為:%d\n", g[i].name, g[i].math);
+}
+
+int main()
+{
+    struct data d=best(student);    //(a)
+    printf("(a)\n");
+    printf("成績最高分同學為%s, 成績為:%d\n", d.name, d.math);
+    
+    printf("(b)\n");
+    failed(student);    //(b)
+    
+    printf("(c)\n");
+    printf("成績平均值為:%.2lf\n", average(student)); //(c)
+    
+    printf("(d)\n");
+    sort(student);      //(d)
+    
+    
+
+    return 0;
+}
+
+//output:
+(a)
+成績最高分同學為Ray, 成績為:99
+(b)
+不及格學生James成績為:42
+不及格學生Lily成績為:53
+(c)
+成績平均值為:73.20
+(d)
+Ray同學 分數為:99
+Danniel同學 分數為:88
+Ted同學 分數為:84
+Lily同學 分數為:53
+James同學 分數為:42
