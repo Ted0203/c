@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main()
+{
+    struct data
+    {
+        char name[10];
+        int score;
+    }student[5];
+    
+    int a, b=0;
+    double sum=0;
+    
+    
+    strcpy(student[0].name,"Ted");
+    student[0].score=93;
+    strcpy(student[1].name,"Lily");
+    student[1].score=98;
+    strcpy(student[2].name,"James");
+    student[2].score=45;
+    strcpy(student[3].name,"Tom");
+    student[3].score=23;
+    strcpy(student[4].name,"Ray");
+    student[4].score=68;
+    
+        
+    
+    printf("(a)\n");        //(a)
+    for(a=0;a<5;a++)
+    {
+        if(student[a].score>student[b].score)
+            b=a;
+    }
+    printf("成績最高學生為:%s, 成績為:%d\n", student[b].name, student[b].score);
+    
+    printf("(b)\n");        //(b)
+    for(a=0;a<5;a++)
+    {
+        if(student[a].score<60)
+            printf("成績不格學生為:%s, 成績為:%d\n", student[a].name, student[a].score);
+    }
+    
+    printf("(c)\n");        //(c)
+    for(a=0;a<5;a++)
+        sum+=student[a].score;
+    printf("平均值為:%.1lf", sum/5.0);
+    
+
+    return 0;
+}
