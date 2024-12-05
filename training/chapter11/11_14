@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct data
+{
+    char name[10];
+    int math;
+}s1={"Ted",89};
+
+void display(struct data st)
+{
+    st.math+=10;
+}
+
+int main()
+{
+    printf("%s同學math成績為:%d\n", s1.name, s1.math);
+    display(s1);
+    printf("%s同學math成績為:%d\n", s1.name, s1.math);
+
+    return 0;
+}
+
+//output:
+Ted同學math成績為:89
+Ted同學math成績為:89
+//因為結構變數為傳值，改指標方式傳址才會+10
