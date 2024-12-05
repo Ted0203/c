@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct time
+{
+    int hour;
+    int minutes;
+    double second;
+}start={14,32,25.49}, end={15,12,17.53}, elapse;
+
+void display(struct time a)
+{
+    printf("的時間為:%d:%d:%.2lf\n", a.hour, a.minutes, a.second);
+}
+
+int main()
+{
+    printf("start");
+    display(start);
+    printf("end");
+    display(end);
+    
+    elapse.hour=end.hour-start.hour;
+    if(end.minutes<start.minutes)
+    {
+        elapse.minutes=60-start.minutes+end.minutes;
+        elapse.hour--;
+    }
+    else
+        elapse.minutes=end.minutes-start.minutes;
+    
+    if(end.second<start.second)
+    {
+        elapse.second=60-start.second+end.second;
+        elapse.minutes--;
+    }
+    else
+        elapse.second=end.second-start.second;
+        
+    printf("elapse");
+    display(elapse);
+    
+
+    return 0;
+}
+
+//output:
+start的時間為:14:32:25.49
+end的時間為:15:12:17.53
+elapse的時間為:0:39:52.04
