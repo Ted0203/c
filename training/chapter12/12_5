@@ -13,7 +13,7 @@ int main()
     
     if(ptr1!=NULL&&ptr2!=NULL)
     {
-        while(fgets(str,size,ptr1)!=NULL)
+        while(fgets(str,size,ptr1)!=NULL)        //size不能為1，至少為2因為最後一個要放\0
             fputs(str,ptr2);
         fclose(ptr1);
         fclose(ptr2);
