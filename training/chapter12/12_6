@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define enter 13
+#define ENTER 13
 #define max 20
 
 
@@ -10,11 +10,11 @@ int main()
     char str[max], ch;
     int i=0;
     
-    ptr=fopen("C:\\Users\\ted.chiang\\Desktop\\121.txt","a");
-    printf("ENTER string:");
+    ptr=fopen("C:\\Users\\USER1\\Desktop\\121.txt","a");
+    printf("enter string:");
     if(ptr!=NULL)
     {
-      while((ch=getche())!=enter&&i<max)
+      while((ch=getche())!=ENTER&&i<max)
         str[i++]=ch;
       putc('\n',ptr);
       fwrite(str,sizeof(ch),i,ptr);
