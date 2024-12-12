@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define size 5
+
+
+int main()
+{
+    char str[size];
+    FILE *ptr;
+    ptr=fopen("C:\\Users\\ted.chiang\\Desktop\\121.txt","r");
+    
+    if(ptr!=NULL)
+    {
+        while(fgets(str,size,ptr)!=NULL);
+            printf("%s", str);
+        fclose(ptr);
+    }
+    else
+        printf("open fail.\n");
+
+    return 0;
+}
+
+//output:
