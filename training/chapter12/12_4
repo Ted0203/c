@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    FILE *ptr1, *ptr2;
+    char ch;
+    int i = 0;
+    
+    ptr1 = fopen("welcome.txt", "r");
+    ptr2 = fopen("output.txt", "w");
+    
+    if((ptr1 != NULL) && (ptr2 != NULL))
+    {
+        while((ch = getc(ptr1)) != EOF)
+        {
+            putc(ch, fptr2);
+            i++;
+        }
+        fclose(ptr1);
+        fclose(ptr2);
+        printf("The file has been copied already!\n");
+        printf("There are %d characters in the file.\n", i);
+    }
+    else
+        printf("Filed to open the file!\n");
+    
+    system("pause");
+    return 0;
+    
+}
+
+//output:
+The file has been copied already!
+There are 30 characters in the file.
