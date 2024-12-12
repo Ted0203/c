@@ -1,26 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#define size 100
 
 
 int main()
 {
     int i=0;
-    char str[];
+    char str[size];
     FILE *ptr1, *ptr2;
-    ptr1=fopen("C:\\Users\\ted.chiang\\Desktop\\121.txt","r");
-    ptr2=fopen("C:\\Users\\ted.chiang\\Desktop\\122.txt","w");
+    ptr1=fopen("C:\\Users\\USER1\\Desktop\\121.txt","r");
+    ptr2=fopen("C:\\Users\\USER1\\Desktop\\122.txt","w");
     
     if(ptr1!=NULL&&ptr2!=NULL)
     {
-        while(fgets(str,1,ptr1)!=NULL)
-        {
-            putc(str,ptr2);
-            i++;
-        }
+        while(fgets(str,size,ptr1)!=NULL)
+            fputs(str,ptr2);
         fclose(ptr1);
         fclose(ptr2);
-        printf("total copy %d char.\n", i);
+        printf("copy success.\n");
     }
     else
         printf("open fail.\n");
@@ -28,5 +25,6 @@ int main()
     return 0;
 }
 
+
 //output:
-total copy 30 char.
+copy success.
