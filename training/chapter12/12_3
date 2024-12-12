@@ -7,13 +7,13 @@ int main()
 {
     char str[size];
     FILE *ptr;
-    ptr=fopen("C:\\Users\\ted.chiang\\Desktop\\121.txt","r");
-    
+    ptr=fopen("C:\\Users\\USER1\\Desktop\\121.txt","r");
     if(ptr!=NULL)
     {
-        while(fgets(str,size,ptr)!=NULL);
+        while(fgets(str,size,ptr)!=NULL)
             printf("%s", str);
         fclose(ptr);
+        printf("open success.\n");
     }
     else
         printf("open fail.\n");
@@ -22,3 +22,5 @@ int main()
 }
 
 //output:
+welcome to the 
+c of the worldopen success.
