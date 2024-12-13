@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <io.h>
+#include <sys/stat.h>
+#define max 16
+
+int main(void)
+{
+    char str[max];
+    int f1, f2;
+    f1=open("C:\\Users\\USER1\\Desktop\\121.txt",O_RDONLY|O_TEXT);
+    f2=open("C:\\Users\\USER1\\Desktop\\122.txt",O_WRONLY);
+
+    if(f1!=-1&&f2!=-1)
+    {
+        while(!eof(f1))
+        {
+            read(f1,str,sizeof(char));
+            write(f2,str,sizeof(char));
+        }
+        close(f1);
+        close(f2);
+        printf("copy success.\n");
+    }
+    else
+        printf("open fail.\n");
+
+    return 0;
+}
+
+//output:
+copy success.
