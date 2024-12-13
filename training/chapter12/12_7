@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 80
+
+int main(void)
+{
+
+    FILE *ptr;
+    char str[MAX];
+    int bytes;
+
+    ptr = fopen("C:\\Users\\USER1\\Desktop\\121.txt", "r");
+    
+    if(ptr!=NULL)
+    {
+        while(!feof(ptr))
+        {
+            bytes = fread(str, sizeof(char), MAX, ptr);
+            if(bytes < MAX)
+                str[bytes] = '\0';
+            puts(str);
+        }
+        fclose(ptr);
+    }
+    else
+        printf("Filed to open the file.\n");
+
+    return 0;
+
+}
+
+//output:
+welcome to the 
+c of the world
