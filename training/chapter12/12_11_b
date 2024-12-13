@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <io.h>
+#include <sys/stat.h>
+
+int main(void)
+{
+    char str[3];
+    int f1, i, sum=0;
+    f1=open("C:\\Users\\USER1\\Desktop\\121.txt",O_RDONLY|O_TEXT);
+
+    if(f1!=-1)
+    {
+        while(!eof(f1))
+        {
+            read(f1,str,3);
+            i=atoi(str);
+            sum+=i;
+            printf("%3d", i);
+        }
+        printf("\naverage:%d", sum/10);
+    }
+    else
+        printf("open fail.\n");
+
+    return 0;
+}
+
+//output:
+ 15 44  4 33 10  5 37 63 48 14  4
+average:27
