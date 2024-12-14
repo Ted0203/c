@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "C:\Users\USER1\Desktop\ted\.vscode\connect code\area.h"
+#include "C:\Users\USER1\Desktop\ted\.vscode\connect code\volume.h"
+
+int main()
+{
+    printf("sphere(1.0)=%5.2f\n", sphere(1.0));
+    printf("circle(1.0)=%5.2f\n", circle(1.0));
+
+    return 0;
+}
+
+//output:
+sphere(1.0)= 4.19
+circle(1.0)= 3.14
