@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define size 15
+
+int main()
+{
+    #ifdef size
+        #if size>20
+            char str[size]="welcome c language.";
+        #elif ((size>10)&&(size<20))
+            char *str="welcome";
+        #else
+            char *str="size too small.";
+        #endif
+    #else
+        char *str="not defined";
+    #endif
+
+    printf("%s", str);
+
+    return 0;
+}
+
+//output:
+welcome
