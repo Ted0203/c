@@ -1,0 +1,5 @@
+to connect two .c files
+key in gcc -o ./program first.c second.c, then key in ./program.exe
+
+./program=create an exe file called program
+first.c and second.c are the files to connected
