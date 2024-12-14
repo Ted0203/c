@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+void area(double);
+void peri(double);
+double pi=3.14;
+
+int main()
+{
+    double r=1.0;
+    printf("pi=%.2f\n", pi);
+    printf("radius=%.2f\n", r);
+    area(r);
+    peri(r);
+
+    return 0;
+}
+
+//output:
+pi=3.14
+radius=1.00
+area=3.14
+peri=6.28
