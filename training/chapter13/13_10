@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define str "hello c language\n"
+
+int main()
+{
+    #ifndef str
+        printf("str not defined.\n");
+    #else
+        printf(str);
+    #endif
+
+    return 0;
+}
+
+//output:
+hello c language
