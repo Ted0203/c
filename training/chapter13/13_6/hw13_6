@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+void star(void);
+
+int main()
+{
+    star();
+    printf("welcome!!\n");
+    star();
+
+    return 0;
+}
+
+//output:
+********
+welcome!!
+********
