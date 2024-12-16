@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct student
+{
+    char name[10];
+    int score;
+}*ptr;
+
+
+int main()
+{
+    double sum=0;
+    int *i, *num;
+    ptr=(struct student*)malloc(sizeof(struct student));
+    i=(int*)malloc(sizeof(int));
+    num=(int*)malloc(sizeof(int));
+    
+    printf("enter number of students:");
+    scanf("%d", num);
+    
+    for(*i=0;*i<*num;(*i)++)
+    {
+        getchar();
+        printf("enter name:");
+        gets((ptr+*i)->name);
+        printf("enter score:");
+        scanf("%d", &(ptr+*i)->score);
+        sum+=(ptr+*i)->score;
+    }
+    for(*i=0;*i<*num;(*i)++)
+        printf("%s student score is %d\n", (ptr+*i)->name, (ptr+*i)->score);
+    printf("average:%.2f\n", sum/(*num));
+    free(ptr);
+    free(i);
+    free(num);
+
+    return 0;
+}
+
+//output:
+enter number of students:2
+enter name:ted
+enter score:99
+enter name:lily
+enter score:54
+ted student score is 99
+lily student score is 54
+average:76.50
