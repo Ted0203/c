@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+
+int main()
+{
+    double *ptr;
+    double sum=0;
+    int i;
+    
+    for(i=0;i<3;i++)
+    {
+        ptr=(double*)malloc(sizeof(double));
+        
+        printf("enter:");
+        scanf("%lf", ptr);
+        getchar();
+        sum+=*ptr;
+        free(ptr);
+    }
+    
+    printf("total: %.1f, average: %.1f\n", sum, sum/3.0);
+    
+
+    return 0;
+}
+
+//output:
+enter:1.4
+enter:2.8
+enter:1.9
+total: 6.1, average: 2.0
