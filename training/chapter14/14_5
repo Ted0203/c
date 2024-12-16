@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct student
+{
+    char name[10];
+    int score;
+}*ptr;
+
+
+int main()
+{
+    int *i, *num;
+    ptr=(struct student*)malloc(sizeof(struct student));
+    i=(int*)malloc(sizeof(int));
+    num=(int*)malloc(sizeof(int));
+    
+    printf("enter number of students:");
+    scanf("%d", num);
+    
+    for(*i=0;*i<*num;(*i)++)
+    {
+        getchar();
+        printf("enter name:");
+        gets((ptr+*i)->name);
+        printf("enter score:");
+        scanf("%d", &(ptr+*i)->score);
+    }
+    for(*i=0;*i<*num;(*i)++)
+        printf("%s student score is %d\n", (ptr+*i)->name, (ptr+*i)->score);
+    free(ptr);
+    free(i);
+    free(num);
+
+    return 0;
+}
+
+//output:
+enter number of students:2
+enter name:ted
+enter score:23
+enter name:lily
+enter score:34
+ted student score is 23
+lily student score is 34
