@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int insertelement(int *arr, int item, int pos, int length)
+{
+    int i;
+    
+    for(i=length;i>=pos;i--)
+        arr[i]=arr[i-1];
+    arr[pos]=item;
+    
+    return length+1;
+}
+
+int main()
+{
+    int i, item=10, pos=2, length=4;
+    int arr[]={12,56,37,63};
+    
+    length=insertelement(arr, item, pos, length);
+    
+    for(i=0;i<length;i++)
+        printf("%3d", arr[i]);
+        
+    printf("\n%d\n", length);
+
+    return 0;
+}
+
+//output:
+ 12 56 10 37 63
+5
