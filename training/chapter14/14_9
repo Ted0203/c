@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node
+{
+    int data;
+    struct node *next;
+};
+typedef struct node NODE;
+
+int main()
+{
+    NODE a, b, c, d;
+    NODE *first=&a;
+    
+    a.data=12;
+    a.next=&b;
+    b.data=38;
+    b.next=&c;
+    c.data=64;
+    c.next=&d;
+    d.data=37;
+    d.next=NULL;
+    
+    while(first!=NULL)
+    {
+        printf("address:%p, data:%d, next address:%p\n", first, first->data, first->next);
+        first=first->next;
+    }
+    
+    return 0;
+}
+
+//output:
+address:0x7ffe25d7dab0, data:12, next address:0x7ffe25d7dac0
+address:0x7ffe25d7dac0, data:38, next address:0x7ffe25d7dad0
+address:0x7ffe25d7dad0, data:64, next address:0x7ffe25d7dae0
+address:0x7ffe25d7dae0, data:37, next address:(nil)
