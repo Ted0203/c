@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int deleteelement(int *arr, int pos, int length)
+{
+    int i;
+    
+    for(i=pos;i<length-1;i++)
+        arr[i]=arr[i+1];
+    
+    return length-1;
+}
+
+int main()
+{
+    int i, pos=1, length=4;
+    int arr[]={12,56,37,63};
+    
+    length=deleteelement(arr, pos, length);
+    
+    for(i=0;i<length;i++)
+        printf("%3d", arr[i]);
+        
+    printf("\n%d\n", length);
+
+    return 0;
+}
+
+//output:
+ 12 37 63
+3
