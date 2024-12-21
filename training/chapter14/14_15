@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node
+{
+    int data;
+    struct node *next;
+};
+typedef struct node NODE;
+
+int main()
+{
+    int num, i;
+    NODE *a, *b, *c, *d;
+
+    printf("enter number:");
+    scanf("%d", &num);
+
+    for(i=0;i<num;i++)
+    {
+        b=(NODE*)malloc(sizeof(NODE));
+        printf("enter:");
+        scanf("%d", b);
+
+        if(i==0)
+            a=b;
+        else
+            c->next=b;
+        b->next=NULL;
+        c=b;
+    }
+    b=a;
+
+    while(b!=NULL)
+    {
+        printf("data:%d\n", b->data);
+        b=b->next; 
+    }
+
+    b=a;
+    while(b!=NULL)
+    {
+        d=b;
+        b=b->next;
+        free(d);
+    }
+    
+    return 0;
+}
+
+//output:
+enter:12
+enter:62
+enter:35
+data:12
+data:62
+data:35
