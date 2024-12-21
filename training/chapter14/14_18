@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node
+{
+    int data;
+    struct node *next;
+};
+typedef struct node NODE;
+typedef NODE* NODEp;
+
+int main()
+{
+    int arr[]={12,43,56,34,98,76,43,24};
+    int i, num=9;
+    NODE *a, *b, *c, *d;
+
+    for(i=0;i<8;i++)
+    {
+        b=(NODE*)malloc(sizeof(NODE));
+        b->data=arr[i];
+        if(i==0)
+            a=b;
+        else
+            c->next=b;
+        b->next=NULL;
+        c=b;
+    }
+
+    b=a;
+    while(b!=NULL&&b->data!=56)
+        b=b->next;
+    d=(NODE*)malloc(sizeof(NODE));
+    d->data=88;
+    d->next=b->next;
+    b->next=d;
+    
+
+    b=a;
+    for(i=0;i<num;i++)
+    {    
+        printf("%3d", b->data);
+        b=b->next;
+    }
+    
+    return 0;
+}
+
+//output:
+ 12 43 56 88 34 98 76 43 24
