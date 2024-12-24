@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a;
+    
+    printf("enter number:");
+    scanf("%o", &a);
+
+    printf("a的十進位:%d, 十六進位:%x\n", a, a);
+
+    return 0;
+}
+
+//output:
+enter number:147
+a的十進位:103, 十六進位:67
