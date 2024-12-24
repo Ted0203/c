@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a=159, b=0147, c=0x618A;
+    
+    printf("a的八進位:%o, 十六進位:%x\n", a, a);
+    printf("b的十進位:%d, 十六進位:%x\n", b, b);
+    printf("c的十進位:%d, 八進位:%o\n", c, c);
+
+    return 0;
+}
+
+//output:
+a的八進位:237, 十六進位:9f
+b的十進位:103, 十六進位:67
+c的十進位:24970, 八進位:60612
