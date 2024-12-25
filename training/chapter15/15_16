@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    struct computer
+    {
+        unsigned floppy:3;
+        unsigned HD:6;
+        unsigned cd_rom:6;
+        unsigned printer:5;
+    }num;
+    
+    int a, b, c, d;
+    
+    printf("enter floppy:");
+    scanf("%d", &a);
+    printf("enter HD:");
+    scanf("%d", &b);
+    printf("enter cd_rom:");
+    scanf("%d", &c);
+    printf("enter printer:");
+    scanf("%d", &d);
+    
+    num.floppy=a;
+    num.HD=b;
+    num.cd_rom=c;
+    num.printer=d;
+    
+    printf("floppy%d個\n", num.floppy);
+    printf("HD%d個\n", num.HD);
+    printf("cd_rom%d個\n", num.cd_rom);
+    printf("printer%d個\n", num.printer);
+
+    return 0;
+}
+
+//output:
+enter floppy:2
+enter HD:1
+enter cd_rom:3
+enter printer:1
+floppy2個
+HD1個
+cd_rom3個
+printer1個
