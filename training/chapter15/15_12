@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define size 10
+
+void show_binary(int a)
+{
+    int i, arr[size];
+    
+    for(i=1;i<=size;i++)
+    {
+        arr[size-i]=a%2;
+        a/=2;
+    }
+    for(i=0;i<size;i++)
+        printf("%d", arr[i]);
+    printf("\n");
+}
+
+int main()
+{
+    int a;
+    a=(89>>2);
+    
+    printf("89為:");
+    show_binary(89);
+    
+    printf("89右移兩個單位後為:");
+    show_binary(a);
+
+    return 0;
+}
+
+//output:
+89為:0001011001
+89右移兩個單位後為:0000010110
