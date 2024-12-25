@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    struct status
+    {
+        unsigned sex:1;
+        unsigned marriage:1;
+        unsigned age:7;
+        unsigned height:8;
+        unsigned weight:8;
+    }maruco={0,0,9,162,50};
+    
+    if(maruco.sex==0)
+        printf("女性");
+    else
+        printf("男性");
+    if(maruco.marriage==0)
+        printf("未婚");
+    else
+        printf("已婚");
+    printf("%d歲\n", maruco.age);
+    printf("%d公分", maruco.height);
+    printf("%d公斤\n", maruco.weight);
+    printf("%ld", sizeof(maruco));
+
+    return 0;
+}
+
+//output:
+女性未婚9歲
+162公分50公斤
+4bytes
