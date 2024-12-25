@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    struct status
+    {
+        unsigned sex:1;
+        unsigned marriage:1;
+        unsigned age:7;
+    }Tom;
+    
+    int a, b, c;
+    
+    printf("enter sex:");
+    scanf("%d", &a);
+    Tom.sex=a;
+    printf("enter marriage:");
+    scanf("%d", &b);
+    Tom.marriage=b;
+    printf("enter age:");
+    scanf("%d", &c);
+    Tom.age=c;
+    
+    if(Tom.sex==0)
+        printf("女性");
+    else
+        printf("男性");
+    if(Tom.marriage==0)
+        printf("未婚");
+    else
+        printf("已婚");
+    printf("%d歲", c);
+
+    return 0;
+}
+
+//output:
+enter sex:1
+enter marriage:0
+enter age:27
+男性未婚27歲
