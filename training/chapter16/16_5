@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+    int num, sum=0, i=1;
+    
+    do
+    {
+        cout<<"enter a int(int>0): ";
+        cin>>num;
+    }
+    while(num<=0);
+    
+    do
+    {
+        sum+=i;
+        i++;
+    }
+    while(i<=num);
+    
+    cout<<"1+2+...+"<<num<<"="<<sum<<endl;
+
+    return 0;
+}
+
+//output:
+enter a int(int>0): -8
+enter a int(int>0): 10
+1+2+...+10=55
