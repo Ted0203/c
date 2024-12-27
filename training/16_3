@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+    int num=2;
+    
+    cout<<"I have "<<num<<" cats."<<endl;
+    cout<<"You have "<<num<<" cats, too."<<endl;
+
+    return 0;
+}
+
+//output:
+I have 2 cats.
+You have 2 cats, too.
