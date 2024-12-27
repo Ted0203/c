@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+    int num;
+    cout<<"enter a int: ";
+    cin>>num;
+    cout<<"num= "<<num<<endl;
+
+    return 0;
+}
+
+//output:
+enter a int: 23
+num= 23
