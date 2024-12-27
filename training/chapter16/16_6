@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int add(int a, int b)
+{
+    int sum;
+    
+    sum=a+b;
+    return sum;
+}
+
+int main()
+{
+    int sum, a=5, b=3;
+    sum=add(a,b);
+    cout<<a<<"+"<<b<<"="<<sum<<endl;
+
+    return 0;
+}
+
+//output:
+5+3=8
