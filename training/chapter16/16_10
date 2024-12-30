@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+class Caaa
+{
+    public:
+        int a;
+        int b;
+        int c;
+};
+
+int add(Caaa obj)
+{
+    return obj.a+obj.b;
+}
+
+int main()
+{
+    Caaa obj;
+    obj.a=1;
+    obj.b=3;
+    
+    obj.c=add(obj);
+    cout<<"a="<<obj.a<<endl;
+    cout<<"b="<<obj.b<<endl;
+    cout<<"c="<<obj.c<<endl;
+
+    return 0;
+}
+
+//output:
+a=1
+b=3
+c=4
