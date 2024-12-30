@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+class Cbox
+{
+    private:
+        char id;
+        int width, height;
+        
+        int area(void)
+        {
+            return width*height;
+        }
+    public:
+        void show_area(void)
+        {
+            cout<<"window "<<id<<", area="<<area()<<endl;
+        }
+        
+        void set_data(char a, int b, int c)
+        {
+            id=a;
+            if(b>0&&c>0)
+            {
+                width=b;
+                height=c;
+            }
+            else
+                cout<<"key in error."<<endl;
+        }
+};
+
+
+int main()
+{
+    Cbox w1;
+    
+    w1.set_data('A', 50, 40);
+    w1.show_area();
+    
+    return 0;
+}
+
+//output:
+window A, area=2000
