@@ -1,0 +1,61 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+class Cbox
+{
+    public:
+        double weight;
+        int width;
+        int height;
+        
+        void set(double a)
+        {
+            weight=a;
+        }
+        
+        void set(int a, int b)
+        {
+            width=a;
+            height=b;
+        }
+        
+        void set(double a, int b, int c)
+        {
+            weight=a;
+            width=b;
+            height=c;
+        }
+        
+        void show(void)
+        {
+            cout<<"weight="<<weight<<endl;
+            cout<<"width="<<width<<endl;
+            cout<<"height="<<height<<endl;
+        }
+};
+
+
+int main()
+{
+    Cbox a;
+    
+    a.set(3.1415);
+    a.set(6,5);
+    a.show();
+    cout<<endl;
+    
+    a.set(6.2831,12,10);
+    a.show();
+    
+    return 0;
+}
+
+//output:
+weight=3.1415
+width=6
+height=5
+
+weight=6.2831
+width=12
+height=10
