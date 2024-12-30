@@ -1,0 +1,57 @@
+ #include <iostream>
+#include <cstdlib>
+#include <cmath>
+using namespace std;
+
+class Csphere
+{
+    int x, y, z, radius;
+    
+    public:
+        void setlocation(void)
+        {
+            cout<<"key in location x:";
+            cin>>x;
+            cout<<"key in location y:";
+            cin>>y;
+            cout<<"key in location z:";
+            cin>>z;
+        }
+        
+        void setradius(void)
+        {
+            cout<<"key in radius:";
+            cin>>radius;
+        }
+        
+        double volume(void)
+        {
+            return (3.14*pow(radius,3)*4)/3;
+        }
+        
+        void showcenter(void)
+        {
+            cout<<"center location is ("<<x<<", "<<y<<", "<<z<<")"<<endl;
+        }
+};
+
+
+int main()
+{
+    Csphere a;
+    
+    a.setlocation();
+    a.setradius();
+    cout<<"volume is "<<a.volume()<<endl;
+    a.showcenter();
+    
+    return 0;
+}
+
+//output:
+key in location x:5
+key in location y:2
+key in location z:7
+key in radius:3
+volume is 113.04
+center location is (5, 2, 7)
