@@ -1,0 +1,50 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+class Cwin
+{
+    public:
+        char id;
+        char title[50];
+        int width;
+        int height;
+        
+        int area(void)
+        {
+            return width*height;
+        }
+        
+        void set_title(void)
+        {
+            cout<<"key in title:";
+            cin>>title;
+        }
+        
+        void display(void)
+        {
+            cout<<"you key in title is "<<title<<endl;
+        }
+};
+
+
+int main()
+{
+    Cwin w1;
+    
+    w1.id='A';
+    w1.width=50;
+    w1.height=40;
+    cout<<"Window "<<w1.id<<":"<<endl;
+    cout<<"area="<<w1.area()<<endl;
+    cout<<"sizeof(w1)="<<sizeof(w1)<<endl;
+    w1.set_title();
+    w1.display();
+    return 0;
+}
+
+//output:
+area=2000
+sizeof(w1)=60
+key in title:hihi
+you key in title is hihi
