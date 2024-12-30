@@ -1,0 +1,40 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+class Cbox
+{
+    public:
+        int length;
+        int width;
+        int height;
+        
+        int volume(void)
+        {
+            return length*width*height;
+        }
+        
+        int surfaceArea(void)
+        {
+            return 2*(length*width+length*height+width*height);
+        }
+};
+
+
+int main()
+{
+    Cbox a;
+    
+    a.length=5;
+    a.width=3;
+    a.height=7;
+    
+    cout<<"Cbox volume is "<<a.volume()<<endl;
+    cout<<"Cbox surface area is "<<a.surfaceArea()<<endl;
+    
+    return 0;
+}
+
+//output:
+Cbox volume is 105
+Cbox surface area is 142
