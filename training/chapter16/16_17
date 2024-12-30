@@ -1,0 +1,42 @@
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+using namespace std;
+
+class Csphere
+{
+    int width, height;
+    
+    public:
+        Csphere(int w, int h)
+        {
+            width=w;
+            height=h;
+        }
+        
+        Csphere(void)
+        {
+            width=10;
+            height=8;
+        }
+        
+        void show(void)
+        {
+            cout<<"width="<<width<<", height="<<height<<", area="<<(width*height)/2<<endl;
+        }
+};
+
+
+int main()
+{
+    Csphere a(20,10);
+    a.show();
+    Csphere b;
+    b.show();
+    
+    return 0;
+}
+
+//output:
+width=20, height=10, area=100
+width=10, height=8, area=40
