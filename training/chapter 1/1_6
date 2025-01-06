@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a=1, b=2;
+    cout<<"the sum of "<< a    //do not enter ;
+    <<" and "<< b              //do not enter ;
+    <<" is "<< a+b<<endl;      //enter ;
+
+    return 0;
+}
+
+//output:
+the sum of 1 and 2 is 3
