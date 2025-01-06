@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a, b;
+    cout<<"enter two numbers:"<<endl;
+    cin>>a>>b;
+    cout<<"the product of "<<a<<" and "<<b<<" is "<<a*b<<endl;
+
+    return 0;
+}
+
+//output:
+enter two numbers:
+2 3
+the product of 2 and 3 is 6
