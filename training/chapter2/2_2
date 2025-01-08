@@ -1,0 +1,2 @@
+利率Rate: float
+本金principal、償還金額payment: long long
