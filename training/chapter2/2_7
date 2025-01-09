@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout<<"(a)\n"<<"who goes with F\145rgus?\012"<<endl;;
+    cout<<"(b)\n"<<3.14e1L<<endl;
+    cout<<"(c)\n"<<1024f<<endl;
+    cout<<"(d)\n"<<3.14L<<endl;
+
+    return 0;
+}
+
+//output:
+(a)
+who goes with Fergus?
+(b)
+31.4
+(c)
+無效，f適用於浮點數型態而1024為int
+(d)
+3.14
