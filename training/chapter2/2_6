@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int month=9, day=7;          //9、7表示10進制
+    int month=09, day=07;        //09、07表示8進制，但沒有09這個數字
+
+    return 0;
+}
