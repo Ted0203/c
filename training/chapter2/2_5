@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout<<"(a)\n"<<'a'<<"  "<<L'a'<<"  "<<"a"
+    <<"  ";
+    wcout<<L"a"<<endl;                                //L"a"要用wcout印出，如用cout會產生亂碼
+    
+    cout<<"(b)\n"<<10<<"  "<<10u<<"  "<<10L<<"  "
+    <<012<<"  "<<0xC<<endl;;                          //0開頭表示8進制，0x表示16進制
+    
+    cout<<"(c)\n"<<3.14<<"  "<<3.14f<<"  "<<3.14L
+    <<"  "<<endl;
+    
+    cout<<"(d)\n"<<10<<"  "<<10u<<"  "<<10.<<"  "
+    <<10e-2<<endl;
+
+    return 0;
+}
+
+//output:
+(a)
+a  97  a  a
+(b)
+10  10  10  10  12
+(c)
+3.14  3.14  3.14  
+(d)
+10  10  10  0.1
