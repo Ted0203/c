@@ -1,0 +1,11 @@
+#include <string>
+
+std::string global_str;              //在全域string字串變數未初始化，其為空字串""
+int global_int;                      //在全域int整數變數未初始化，其值為0
+int main()
+{
+    int local_int;                   //在區域int變數未初始化，其值為垃圾值
+    std::string global_str;          //在區域string字串變數，重新定義其值依舊為空字串""
+
+    return 0;
+}
