@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    (a)
+    cin>>int input_value;            X
+    
+    int input_value;                 O
+    cin>>input_value;                O
+    
+    (b)
+    int i={3.14};                    X
+                                    //int搭配{}不能用int以外型態
+    
+    (c)
+    double salary=wage=9999.99;      X
+    
+    double wage;                     O
+    double salary=wage=9999.99;      O
+    
+    (d)
+    int i=3.14;                      O
+                                    //但小數點會被截斷
+
+    return 0;
+}
