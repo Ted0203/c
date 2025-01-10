@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int i=42;
+int main()
+{
+    int i=100;
+    int j=i;                  //若想讓全域變數i的值賦予給j，可修改成 int j=::i;
+    
+    cout<<"j的值為 "<<j;
+        
+    return 0;
+}
+
+//output:
+j的值為 100
