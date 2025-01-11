@@ -1,0 +1,10 @@
+int main()
+{
+    int i=42;
+    
+    void *p=&i;         //OK: void* 可以指向任何型別
+    
+    long *lp=&i;        //error: pointer型別不同
+    
+    return 0;
+}
