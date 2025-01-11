@@ -1,0 +1,16 @@
+int main()
+{
+    (a)
+    int ival=1.01;        //OK
+    
+    (b)
+    int &rval1=1.01;      //error: 初始器不能是值，而是物件
+    
+    (c)
+    int &rval2=ival;      //OK
+    
+    (d)
+    int &rval3;           //error: 要給他一個初始化的物件
+
+    return 0;
+}
