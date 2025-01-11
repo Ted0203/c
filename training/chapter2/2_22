@@ -1,0 +1,10 @@
+int main()
+{
+    int *p;
+    
+    if(p)       //p is null or not
+    
+    if(*p)      //*p is 0 or not
+    
+    return 0;
+}
