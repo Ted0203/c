@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int i=0;
+    
+    (a)
+    double *dp=&i;        //error: 型別不一樣  
+    
+    (b)
+    int *ip=i;            //error: 不能把變數給指標
+    
+    (c)
+    int *p=&i;            //OK
+    
+    return 0;
+}
