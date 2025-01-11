@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int i, &r1=i;                //r1是i的引用
+    i=5; r1=10;
+    
+    cout<<i<<" "<<r1<<endl;
+
+    return 0;
+}
+
+//output:
+10 10
