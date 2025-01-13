@@ -1,0 +1,25 @@
+int main()
+{
+    (a)
+    int i=-1, &r=0;             //error: 引用必須指向物件而非常數
+    
+    (b)
+    int *const p2=&i2;          //OK
+    
+    (c)
+    const int i=-1, &r=0;       //OK: r是const int, 可以引用到常數
+    
+    (d)
+    const int *const p3=&i2;    //OK
+    
+    (e)
+    const int *p1=&i2;          //OK: 不可修改p1指向的數據，但可以修改p1的值，也就是指向的位址
+    
+    (f)
+    const int &const r2;        //error: need to be initialized, 
+    
+    (g)
+    const int i2=i, &r=i;       //OK
+
+    return 0;
+}
