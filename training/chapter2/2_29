@@ -1,0 +1,22 @@
+int main()
+{
+    (a)
+    i=ic;           //OK: const int可以賦予給int
+    
+    (b)
+    p1=p3;          //error: p3 is const pointer, 不能賦予給普通指標
+    
+    (c)
+    p1=&ic;         //error: 普通指標不能指向const int
+    
+    (d)
+    p3=&ic;         //OK: p3 is const int *const, 可以指向const型別
+    
+    (e)
+    p2=p1;          //OK: 普通指標可以賦予給const指標
+    
+    (f)
+    ic=*p3;         //OK
+
+    return 0;
+}
