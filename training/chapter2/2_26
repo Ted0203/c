@@ -1,0 +1,16 @@
+int main()
+{
+    (a)
+    const int buf;          //error: const need to be initialized
+    
+    (b)
+    int cnt=0;              //OK
+    
+    (c)
+    const int sz=cnt;       //OK
+    
+    (d)
+    ++cnt; ++sz;            //error: const can't be changed
+
+    return 0;
+}
