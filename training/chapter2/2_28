@@ -1,0 +1,19 @@
+int main()
+{
+    (a)
+    int i, *const cp;           //error: cp need to be initialized
+    
+    (b)
+    int *p1, *const p2;         //error: p2 need to be initialized
+    
+    (c)
+    const int ic, &r=ic;        //error: ic need to be initialized
+    
+    (d)
+    const int *const p3;        //error: p3 need to be initialized
+    
+    (e)
+    const int *p;               //OK
+
+    return 0;
+}
