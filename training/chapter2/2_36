@@ -1,10 +1,21 @@
+#include <iostream>
+using namespace std;
+
 int main()
 {
-    int a=3, b=4;           //both a and b are int
-    decltype(a) c=a;        //both a and c is int
-    decltype((b)) d=a;      //d is int&, a is int
-    ++c;                    //c is int
-    ++d;                    //d is int
+    int a=3, b=4;
+    decltype(a) c=a;        //c is int
+    decltype((b)) d=a;      //d is int&
+    ++c;                    
+    ++d;                    
+    
+    cout<<"a= "<<a<<"\nb= "<<b<<"\nc= "<<c<<"\nd= "<<d;
 
     return 0;
 }
+
+//output:
+a= 4
+b= 4
+c= 4
+d= 4
