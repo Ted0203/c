@@ -11,3 +11,9 @@ int main()
 
     return 0;
 }
+
+//output:
+a= 3
+b= 4
+c= 3
+d= 3
