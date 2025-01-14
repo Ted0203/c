@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a=3, b=4;           
+    decltype(a) c=a;        //c is int  
+    decltype(a=b) d=a;      //d is int&. a=b的型別為int&
+    
+    cout<<"a= "<<a<<"\nb= "<<b<<"\nc= "<<c<<"\nd= "<<d;
+
+    return 0;
+}
