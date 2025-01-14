@@ -1,0 +1,8 @@
+int main()
+{
+    int null=0, *p=null;        //error: 不能把變數賦予給指標，
+    // constexpr int null=0;
+    // int *p=null;
+
+    return 0;
+}
