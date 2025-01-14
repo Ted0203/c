@@ -1,0 +1,11 @@
+#include <iostream>
+
+int main()
+{
+    const int v2=0;                                 //v2 has 頂層const
+    int v1=v2;                                      //NO
+    int *p1=&v1, &r1=v1;                            //NO
+    const int *p2=&v2, *const p3=&i, &r2=v2;        //p2 has 底層const, p3 has 頂層跟底層const, r2 has 底層const
+
+    return 0;
+}
