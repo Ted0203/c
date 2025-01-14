@@ -1,0 +1,10 @@
+int main()
+{
+    r1=v2;      //OK: 頂層const不受影響
+    p1=p2;      //error: p2 is 底層const, p1 need to be 底層const too
+    p2=p1;      //OK: 非const可轉換為const
+    p1=p3;      //error: p3 is 底層const, p1 need to be 底層const too
+    p2=p3;      //OK: p2 and p3 both 底層const, copy時忽略頂層const
+
+    return 0;
+}
