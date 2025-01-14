@@ -1,0 +1,11 @@
+int main()
+{
+    a=42;   //OK
+    b=42;   //OK
+    c=42;   //OK
+    d=42;   //error: d is int*
+    e=42;   //error: const int*
+    g=42;   //error: g is const int的引用, 不能被賦予值
+
+    return 0;
+}
