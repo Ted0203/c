@@ -1,0 +1,10 @@
+int main()
+{
+    int a=3, b=4;           //both a and b are int
+    decltype(a) c=a;        //both a and c is int
+    decltype((b)) d=a;      //d is int&, a is int
+    ++c;                    //c is int
+    ++d;                    //d is int
+
+    return 0;
+}
