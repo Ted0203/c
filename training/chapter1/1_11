@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a, b;
+    
+    cout<<"enter two numbers: ";
+    cin>>a>>b;
+    
+    while(a<=b)
+    {
+        cout<<a<<", ";
+        a++;
+    }
+
+    return 0;
+}
+
+//output:
+enter two numbers: 9 15
+9, 10, 11, 12, 13, 14, 15, 
