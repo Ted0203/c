@@ -1,0 +1,61 @@
+#include <iostream>                //1_9
+using namespace std;
+
+int main()
+{
+    int a=50, sum=0;
+    while(a<=100)
+    {
+        sum+=a;
+        a++;
+    }
+    cout<<"sum is "<<sum<<endl;
+
+    return 0;
+}
+//output:
+sum is 3825
+
+#include <iostream>
+using namespace std;
+
+int main()                              //1_10
+{
+    int a=10, sum=0;
+    while(a>=0)
+    {
+        sum+=a;
+        a--;
+    }
+    cout<<"sum is "<<sum<<endl;
+
+    return 0;
+}
+//output:
+sum is 55
+
+#include <iostream>
+using namespace std;
+
+int main()                              //1_11
+{
+    int a, b;
+    cin>>a>>b;
+    while(a<=b)
+    {
+        cout<<a<<" "<<endl;
+        a++;
+    }
+
+    return 0;
+}
+//output:
+2 9
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
