@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string a, b;
+    cin>>a>>b;
+    if(a==b)
+        cout<<"they are equal.";
+    else if(a>b)
+            cout<<"first is greater than last.";
+        else
+            cout<<"last is greater than first.";
+
+    return 0;
+}
+
+//output:
+asa asaa
+last is greater than first.
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string a, b;
+    cin>>a>>b;
+    if(a.size()==b.size())
+        cout<<"they are equal.";
+    else if(a.size()>b.size())
+            cout<<"first is greater than last.";
+        else
+            cout<<"last is greater than first.";
+
+    return 0;
+}
+
+//output:
+wswd wdw
+first is greater than last.
