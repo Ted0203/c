@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string a, b;
+    while(cin>>a)
+        b+=a;                //未分隔開
+    cout<<b<<endl;
+
+    return 0;
+}
+
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string a, b;
+    while(cin>>a)
+        b+=a+" ";            //分隔開
+    cout<<b<<endl;
+
+    return 0;
+}
