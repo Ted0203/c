@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string a("HiHi");
+    
+    int i=0;
+    while(i<a.size())
+        a[i++]='X';
+    cout<<a<<endl;
+    
+    for(i=0;i<a.size();i++)
+        a[i]='Y';
+    cout<<a<<endl;
+
+    return 0;
+}
+
+//output:
+XXXX
+YYYY
