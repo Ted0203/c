@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    (a)
+    vector<vector<int>> ivec;               //OK               
+    
+    (b)
+    vector<string> svec=ivec;               //error: type of ivec is int, different with string          
+    
+    (c)
+    vector<string> svec(10, "null");        //OK: a svec has 10 string that value are "null"
+
+    return 0;
+}
