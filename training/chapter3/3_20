@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    int a;
+    vector<int> v1;
+    
+    while(cin>>a)
+        v1.push_back(a);
+    for(int i=0;i<v1.size()-1;i++)
+        cout<<v1[i]+v1[i+1]<<'\t';
+    cout<<endl;
+        
+    for(int i=0;i<=v1.size()/2;i++)
+        cout<<v1[i]+v1[v1.size()-1-i]<<'\t';
+
+    return 0;
+}
+
+//input: 12 22 31 42 55
+//output: 34      53      73      97
+          67      64      62
