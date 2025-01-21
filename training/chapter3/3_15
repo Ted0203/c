@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    vector<string> vec;
+    string a;
+    while(cin>>a)
+        vec.push_back(a);
+    for(auto &b:vec)
+        cout<<b<<" ";
+
+    return 0;
+}
