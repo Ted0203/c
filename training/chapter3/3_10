@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string a;
+    cout<<"enter a string: ";
+    cin>>a;
+    
+    for(auto &c:a)
+        if(!ispunct(c))
+            cout<<c;
+
+    return 0;
+}
+
+//input: hi,hi
+//output:hihi
