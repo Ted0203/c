@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    string a;
+    vector<string> v1;
+    while(cin>>a)
+        v1.push_back(a);
+    for(auto &b:v1)          //b is string, can not change to upper
+        for(auto &c:b)       //c is char, can change to upper
+            c=toupper(c);
+    for(auto b:v1)
+        cout<<b<<endl;
+
+    return 0;
+}
+
+//input:  hihi
+          hello
+//output: HIHI
+          HELLO
