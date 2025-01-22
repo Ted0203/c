@@ -14,7 +14,7 @@ int main()
         for(auto &c:*b)
             c=toupper(c);
     for(auto &d:s)
-        if(s.empty())
+        if(d.empty())
             cout<<"empty string."<<endl;
         else
             cout<<d<<" ";
