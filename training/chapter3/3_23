@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    vector<int> v1(10,2);
+    
+    for(auto a=v1.begin();a!=v1.end();a++)
+    {
+        (*a)*=2;
+        cout<<*a<<" ";
+    }
+
+    return 0;
+}
+
+//output:
+4 4 4 4 4 4 4 4 4 4 
