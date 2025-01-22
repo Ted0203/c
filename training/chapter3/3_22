@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    vector<string> s;
+    string a;
+    
+    while(getline(cin,a))
+        s.push_back(a);
+    for(auto b=s.begin();b!=s.end()&&!b->empty();b++)
+        for(auto &c:*b)
+            c=toupper(c);
+    for(auto &d:s)
+        if(s.empty())
+            cout<<"empty string."<<endl;
+        else
+            cout<<d<<" ";
+
+    return 0;
+}
+
+//input: hihi
+         hello
+//output: HIHI
+          HELLO
