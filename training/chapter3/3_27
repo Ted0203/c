@@ -1,0 +1,18 @@
+int main()
+{
+    unsigned buf_size=1024;
+    
+    (a)
+    int ia[buf_size];               //error: buf_size not a const
+    
+    (b)
+    int ia[4*7-14];                 //OK
+    
+    (c)
+    int ia[txt_size()];             //error: value of txt_size()需在運算時才知道, need constexpr
+    
+    (d)
+    char st[11]="fundamental";      //error: [12], include \0
+
+    return 0;
+}
