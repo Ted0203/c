@@ -1,0 +1,21 @@
+#include <iostream>
+#include <iterator>
+using namespace std;
+
+int main()
+{
+    int a[5];
+    for(int &b:a)
+        cout<<b<<" ";
+    cout<<endl;
+    for(int *c=begin(a), *d=end(a);c!=d;c++)
+        *c=0;
+    for(int &e:a)
+        cout<<e<<" ";
+
+    return 0;
+}
+
+//output:
+-1989805760 32765 913331087 29820 0 
+0 0 0 0 0 
