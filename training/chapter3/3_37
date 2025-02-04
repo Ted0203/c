@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const char ca[]={'h','e','l','l','o'};      //not '\0' in end, keep print char until find '\0' after hello.
+    const char *cp=ca;
+    while(*cp)
+    {
+        cout<<*cp<<endl;
+        ++cp;
+    }
+
+    return 0;
+}
+
+//output:
+h
+e
+l
+l
+o
+8
+%
+�
+�
