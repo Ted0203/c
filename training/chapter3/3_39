@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string a="Hello";    //ASCII of H is 72
+    string b="hello";    //ASCII  of h is 104
+    
+    if(a==b)
+        cout<<"a is equal to b.";
+    else if(a>b)
+            cout<<"a is greater than b.";
+        else
+            cout<<"a is less than b.";
+
+    return 0;
+}
+
+//output:
+a is less than b.
+
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() {
+    char a[]="Hello";
+    char b[]="hello";
+    
+    if(strcmp(a,b)==0)
+        cout<<"a is equal to b.";
+    else if(strcmp(a,b)>0)
+            cout<<"a is greater than b.";
+        else
+            cout<<"a is less than b.";
+
+    return 0;
+}
+
+//output:
+a is less than b.
