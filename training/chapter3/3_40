@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() {
+    char a[]="Hello";
+    char b[]="hello";
+    char c[100];
+    
+    strcpy(c,a);
+    strcat(c," ");
+    strcat(c,b);
+    
+    cout<<c;
+
+    return 0;
+}
+
+//output:
+Hello hello
