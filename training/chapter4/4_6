@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int a=0;
+    cout<<"key in a number."<<endl;
+    cin>>a;
+    
+    if(a%2==0)
+        cout<<"a is 偶數.";
+    else
+        cout<<"a is 奇數.";
+
+    return 0;
+}
+
+//output:
+key in a number.
+13
+a is 奇數.
