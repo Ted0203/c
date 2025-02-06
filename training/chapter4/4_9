@@ -1,0 +1,7 @@
+int main()
+{
+    const char *cp="Hello World";
+    if(cp&&*cp)                         //cp不是空指針NULL, *cp is 'H'而不是0, 所以為真。
+
+    return 0;
+}
