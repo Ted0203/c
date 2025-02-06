@@ -1,0 +1,17 @@
+//會從第二個元素開始取值，且最後對 v.end() 進行取值，结果是未定義的。 如下:
+
+
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> vec = {1, 2, 3, 4, 5};
+    
+    auto it = vec.begin();
+    while (it != vec.end()) {
+        ++it;           // 先遞增
+        std::cout << *it << " ";  //error: 在*it=5時++it會等於vec.end, 沒有值
+    }
+
+    return 0;
+}
