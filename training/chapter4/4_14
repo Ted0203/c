@@ -1,0 +1,8 @@
+int main()
+{
+    if(42=i)        //error
+    
+    if(i=42)        //true: i is 42, nonzero
+
+    return 0;
+}
