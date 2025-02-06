@@ -1,0 +1,24 @@
+int main()
+{
+    vector<string>::iterator;
+    
+    (a)
+    *iter++;                //OK
+    
+    (b)
+    (*iter)++;              //error: *iter is string, don't have ++
+    
+    (c)
+    *iter.empty();          //error: should be (*iter).empty()
+    
+    (d)
+    iter->empty();          //OK
+    
+    (e)
+    ++*iter;                //error: *iter is string, don't have ++
+    
+    (f)
+    iter++->empty();        //OK
+
+    return 0;
+}
