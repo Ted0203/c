@@ -1,0 +1,11 @@
+int main()
+{
+    double dval;
+    int ival, *pi;
+    
+    dval=ival=pi=0;     //error: pi is pointer, can not give value to int.
+    //dval=ival=0;
+    //pi=0;
+
+    return 0;
+}
