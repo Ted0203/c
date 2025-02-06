@@ -1,0 +1,8 @@
+int main()
+{
+    int i, j, k;
+    
+    i!=j<k;         //先判斷j<k, 結果為true or false代表1 or 0, 再判斷i是否等於1 or 0
+
+    return 0;
+}
