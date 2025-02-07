@@ -6,7 +6,7 @@ int main()
     int x[10];
     int *p=x;
     
-    cout<<sizeof(x)/sizeof(*x)<<endl;    //10
+    cout<<sizeof(x)/sizeof(*x)<<endl;    //10, x is array, *x代表解引用指向第一個元素
     cout<<sizeof(p)/sizeof(*p)<<endl;    //size of pointer/size of int
 
     return 0;
