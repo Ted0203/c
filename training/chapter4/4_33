@@ -1,0 +1,8 @@
+int main()
+{
+    (someValue? (++x, ++y):--x),--y;
+    //if true, x跟y遞增並只返回y值,再執行外部的--y
+
+
+    return 0;
+}
