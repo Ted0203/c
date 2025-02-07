@@ -1,0 +1,14 @@
+int main()
+{
+    (a)
+    if(fval)            //fval:float, float->bool
+    
+    (b)
+    dval=fval+ival      //ival:int, dval:double, int->float, (fval+ival)->double
+    
+    (c)
+    dval+ival*cval      //cval:char, cval->int, (ival+cval)->double
+
+
+    return 0;
+}
