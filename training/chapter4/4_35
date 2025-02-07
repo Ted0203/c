@@ -1,0 +1,23 @@
+int main()
+{
+    char cval;
+    int ival;
+    unsigned int ui;
+    float fval;
+    double dval;
+    
+    (a)
+    cval='a'+3;             //a->int, (a+3)->char
+    
+    (b)
+    fval=ui-ival*1.0;       //ival->double, ui->double, (ui-ival*1.0)->float
+    
+    (c)
+    dval=ui*fval;           //ui->float, (ui*fval)->double
+    
+    (d)
+    cval=ival+fval+dval;    //ival->double, fval->double, (ival+fval+dval)->char
+
+
+    return 0;
+}
