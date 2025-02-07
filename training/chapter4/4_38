@@ -1,0 +1,7 @@
+int main()
+{
+    double slope=static_cast<double>(j/i);
+    //先做(j/i), 再轉換成double給slope
+
+    return 0;
+}
