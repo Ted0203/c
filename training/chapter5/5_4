@@ -1,0 +1,20 @@
+int main()
+{
+    (a)
+    while(string::iterator iter!=s.end())      //iter未初始化,像是指向begin()
+    {
+        
+    }
+    
+    (b)
+    while(bool status=find(word))             //status為區域變數
+    {
+        
+    }
+    if(!status)                               //if述句在while外面, 無法使用status, 或把if放進while括號內
+    {
+        
+    }
+
+    return 0;
+}
