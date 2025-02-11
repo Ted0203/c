@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int sum=0, val=1;
+    
+    while(val<=10)
+        sum+=val, ++val;    //用逗號卻降低可讀性
+    cout<<sum;
+
+    return 0;
+}
+
+//output:
+55
