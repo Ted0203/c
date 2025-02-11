@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    vector<string>score={"F","D","C","B","A","A++"};
+    int grade;
+    string a;
+    
+    cin>>grade;
+    
+    grade<60 ? a=score[0] : a=score[(grade-50)/10];
+    cout<<a;
+
+    return 0;
+}
+
+//output:
+79
+C
