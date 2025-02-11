@@ -1,0 +1,24 @@
+int main()
+{
+    (a)
+    if(ival1!=ival2)
+        ival1=ival2                         //need ;
+    else ival1=ival2=0;
+    
+    (b)
+    if(ival<minval)
+        minval-ival;                        //need block{}
+        occurs=1;
+    
+    (c)
+    if(int ival=get_value())                //ival為區域變數,if(!ival)在外面,無法使用
+        cout<<"ival= "<<ival<<endl;
+    if(!ival)
+        cout<<"ival=0\n";
+    
+    (d)
+    if(ival=0)                              //use ival==0
+        ival=get_value();
+
+    return 0;
+}
