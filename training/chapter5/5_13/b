@@ -1,0 +1,17 @@
+int main() {
+    
+    unsigned index = some_value();
+    int ix;
+    
+    switch (index) {
+        case 1:
+            ix = get_value();       //ix錯誤初始化位置
+            ivec[ ix ] = index;
+            break;
+        default:
+            ix = ivec.size()-1;     //如case 1未執行, ix未定義
+            ivec[ ix ] = index;
+}
+
+    return 0;
+}
