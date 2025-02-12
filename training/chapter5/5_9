@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int a=0, e=0, i=0, o=0, u=0;
+    char x;
+    while(cin>>x)
+    {
+        if(x=='a')
+            a++;
+        else if(x=='e')
+            e++;
+            else if(x=='i')
+                i++;
+                else if(x=='o')
+                    o++;
+                    else if(x=='u')
+                        u++;
+    }
+    
+    cout<<"a: "<<a<<endl
+        <<"e: "<<e<<endl
+        <<"i: "<<i<<endl
+        <<"o: "<<o<<endl
+        <<"u: "<<u<<endl;
+
+    return 0;
+}
