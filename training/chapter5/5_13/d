@@ -1,0 +1,17 @@
+int main() {
+    
+    constexpr unsigned ival=512, jval=1024, kval=4096;      //case後面放整數值常數運算式
+    unsigned bufsize;
+    unsigned swt = get_bufCnt();
+    
+    switch(swt) {
+        case ival:                                          //case後面如果是放變數名稱, 那此變數須為整數值且是常數const
+            bufsize = ival * sizeof(int);
+            break;
+        case jval:
+            bufsize = jval * sizeof(int);
+            break;
+        case kval:
+            bufsize = kval * sizeof(int);
+            break;
+}
