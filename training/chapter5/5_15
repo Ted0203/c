@@ -1,0 +1,27 @@
+int main()
+{
+    (a)
+    int ix;                                 //如if要用到ix, 需宣告為全域變數
+    for(ix=0;ix!=sz;++ix)
+    {
+            
+    }    
+    if(ix!=sz)
+    
+            
+    (b)
+    int ix;
+    for(;ix!=sz;++ix)                       //for沒初始化須加;
+    {
+        
+    }
+        
+    (c)
+    for(int ix=0;ix!=sz;++ix)               //++sz的話迴圈無止盡
+    {
+        
+    }
+    
+
+    return 0;
+}
