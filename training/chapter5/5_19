@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    
+    string a, b;
+    cin>>a>>b;
+    do{
+        cout<<(a>b? a:b)<<"is larger than the other.";
+    }while(cin>>a>>b);
+
+    return 0;
+}
+
+//input:
+adc
+dcddc
+
+//output:
+dcddcis larger than the other.
