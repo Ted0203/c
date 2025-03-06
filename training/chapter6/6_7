@@ -9,9 +9,14 @@ int call(void)
 
 int main()
 {
-    call();
-    call();
-    call();
+    cout<<call()<<endl;
+    cout<<call()<<endl;
+    cout<<call()<<endl;
 
     return 0;
 }
+
+//output:
+0
+1
+2
