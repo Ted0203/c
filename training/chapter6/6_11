@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+void reset(int &i)
+{
+    i=-i;
+}
+
+int main()
+{
+    int a;
+    cin>>a;
+    
+    cout<<"before reset, a= "<<a<<endl;
+    reset(a);
+    cout<<"after reset, a= "<<a<<endl;
+    
+    return 0;
+}
+
+//output:
+3
+before reset, a= 3
+after reset, a= -3
