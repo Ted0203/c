@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int abs(int a)
+{
+    return a<0 ? -a : a;
+}
+
+int main()
+{
+    cout<<abs(-3)<<endl;
+
+    return 0;
+}
+
+//output:
+3
