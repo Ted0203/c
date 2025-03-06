@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int fact(int a)
+{
+    int sum=1;
+    while(a>1)
+        sum*=a--;
+    return sum;
+}
+
+int main()
+{
+    int a=0;
+    a=fact(10);
+    
+    cout<<"10!= "<<a<<endl;
+
+    return 0;
+}
+
+//output:
+10!= 3628800
