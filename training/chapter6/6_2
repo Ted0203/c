@@ -1,0 +1,24 @@
+(a)
+    int f()
+    {
+        string s;
+        
+        return s;                   //return type cann't be string.
+    }
+    
+    (b)
+    f2(int i)                       //must have a return type.
+    {
+        
+    }
+    
+    (c)
+    int calc(int v1, int v1)        //cann't have the same name.
+    {
+        
+    }
+    
+    (d)
+    double square(double x)
+    
+    return x*x;                     //need {} to block.
